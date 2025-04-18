@@ -20,7 +20,7 @@ def chat_with_groq(prompt, context):
     response = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
-            {"role": "system", "content": "Você é um assistente que responde com base em documentos fornecidos."},
+            {"role": "system", "content": "Você é um assistente de Sistemas de viagem que responde com base em documentos fornecidos sobre quais são os melhores lugares e ponto pra visitar."},
             {"role": "user", "content": f"{context}\n\nPergunta: {prompt}"}
         ]
     )
@@ -29,8 +29,8 @@ def chat_with_groq(prompt, context):
 
 # Interface
 def main():
-    st.title("Chat Inteligente")
-    st.image("logo.png", width=200, caption="Sistema Inteligente") 
+    st.title("Sistema Inteligente de Viagem")
+    st.image("logo.png", width=200, caption="Sistema Inteligente de Viagem") 
 
     
     with st.sidebar:
