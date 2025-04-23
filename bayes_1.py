@@ -15,6 +15,13 @@ client = Groq(api_key=GROQ_API_KEY)
 # função para extrair os arquivos     
 def extract_files(uploader):
     text = ""
+    local_pdf_path = "base_de_dados.pdf" 
+
+    if os.path.exists(local_pdf_path):
+        with fitz.open(local_pdf_path) as doc:
+            for page in doc:
+                text += page.get_text("text")
+
     for pdf in uploader:
         with fitz.open(stream=pdf.read(), filetype="pdf") as doc: 
             for page in doc:
