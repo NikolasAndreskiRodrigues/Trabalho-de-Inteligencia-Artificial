@@ -3,6 +3,10 @@ import fitz
 from groq import Groq  
 import os
 
+# Caminho dinâmico da imagem
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOGO_PATH = os.path.join(CURRENT_DIR, "logo.png")
+
 # Configurar chave da Groq
 GROQ_API_KEY = "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"
 client = Groq(api_key=GROQ_API_KEY)
@@ -29,7 +33,7 @@ def chat_with_groq(prompt, context):
 # Interface
 def main():
     st.title("Sistema Inteligente de Viagem")
-    st.image("logo.jpg")
+    st.image(LOGO_PATH, width=200, caption="Sistema Inteligente de Viagem")
 
     with st.sidebar:
         st.header("Upload de arquivos PDF")
