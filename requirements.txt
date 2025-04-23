@@ -1,3 +1,12 @@
+langchain
+langchain-community
+langchain-openai
+pypdf
+streamlit
+python-dotenv
+faiss-cpu
+fitz
+groq
 acres==0.3.0
 aiofiles==24.1.0
 aiohappyeyeballs==2.6.1
@@ -65,7 +74,7 @@ orjson==3.10.16
 packaging==24.2
 pandas==2.2.3
 pathlib==1.0.1
-pillow==10.2.0
+pillow==11.2.0
 propcache==0.3.1
 protobuf==5.29.4
 prov==2.0.1
