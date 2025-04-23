@@ -36,7 +36,7 @@ def chat_with_groq(prompt, context):
 def main():
     col1, col2 = st.columns([1, 3])
     with col1:
-        st.image(LOGO_PATH, width=100)
+        st.image(LOGO_PATH, width=200)
     with col2:
         st.title("Sistema Inteligente de Viagem")
     # Incluir uma imagem de acordo ao sistema escolhido
