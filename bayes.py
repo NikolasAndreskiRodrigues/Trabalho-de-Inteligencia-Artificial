@@ -33,7 +33,7 @@ def chat_with_groq(prompt, context):
 # Interface
 def main():
     st.title("Sistema Inteligente de Viagem")
-    st.image(LOGO_PATH, width=200, caption="Sistema Inteligente de Viagem")
+    st.image(LOGO_PATH, width=200, caption="logo.png")
 
     with st.sidebar:
         st.header("Upload de arquivos PDF")
