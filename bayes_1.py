@@ -2,6 +2,11 @@
 import streamlit as st
 import fitz
 from groq import Groq
+import os
+
+# Caminho dinâmico da imagem
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+LOGO_PATH = os.path.join(CURRENT_DIR, "logo.png")   
 
 # Configurar chave da Groq
 GROQ_API_KEY = "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"
@@ -30,7 +35,7 @@ def chat_with_groq(prompt, context):
 # CRIAR A INTERFACE
 def main():
     st.title("Sistema Inteligente de Viagem")
-    st.image("logo.png")
+    st.image(LOGO_PATH, width=200, caption="logo.png")
     # Incluir uma imagem de acordo ao sistema escolhido
     with st.sidebar:
         st.header("UPLoader Files")
